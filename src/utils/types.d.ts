@@ -1,4 +1,4 @@
-export type NodeType =
+type NodeType =
   | "text"
   | "image"
   | "list"
@@ -8,13 +8,13 @@ export type NodeType =
   | "heading2"
   | "heading3";
 
-export type NodeData = {
+type NodeData = {
   id: string;
   type: NodeType;
   value: string;
 };
 
-export type Page = {
+type Page = {
   id: string;
   slug: string;
   title: string;
