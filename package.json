@@ -12,6 +12,7 @@
     "generate-types": "tcm -p src/**/*.module.css"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "nanoid": "^5.1.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
