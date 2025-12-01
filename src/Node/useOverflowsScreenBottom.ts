@@ -1,0 +1,13 @@
+import { useRef, useState, useEffect } from "react";
+export const useOverflowsScreenBottom = () => {
+  const ref = useRef<HTMLElement>(null);
+  const [overflows, setOverflows] = useState(false);
+  useEffect(() => {
+    if (ref.current) {
+      const { bottom } = ref.current.getBoundingClientRect();
+      const { innerHeight } = window;
+      setOverflows(bottom > innerHeight);
+    }
+  }, []);
+  return { ref, overflows };
+};
