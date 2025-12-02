@@ -15,9 +15,9 @@ type SupportedNodeType = {
 const supportedNodeTypes: SupportedNodeType[] = [
   { value: "text", name: "Text" },
   { value: "list", name: "List" },
-  { value: "heading1", name: "Heading1" },
-  { value: "heading2", name: "Heading2" },
-  { value: "heading3", name: "Heading3" },
+  { value: "heading1", name: "Heading 1" },
+  { value: "heading2", name: "Heading 2" },
+  { value: "heading3", name: "Heading 3" },
 ];
 
 export const CommandPanel = ({ nodeText, selectItem }: CommandPanelProps) => {
@@ -50,12 +50,13 @@ export const CommandPanel = ({ nodeText, selectItem }: CommandPanelProps) => {
         [styles.reverse]: overflows,
       })}
     >
-      <div className={styles.title}>Block</div>
+      <div className={styles.title}>Blocks</div>
       <ul>
         {supportedNodeTypes.map((type, index) => {
           const selected = index === selectedItemIndex;
           return (
             <li
+              key={type.value}
               onClick={() => selectItem(type.value)}
               className={cx({ [styles.selected]: selected })}
             >
