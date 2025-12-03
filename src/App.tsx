@@ -2,9 +2,8 @@ import { Page } from "./Page/Page";
 import { AppStateProvider } from "./state/AppStateContext";
 import { createPage } from "./utils/createPage";
 import { Routes, Route } from "react-router-dom";
+import { Auth } from "./auth/Auth";
 const initialPage = createPage();
-
-const Auth = () => <div>Auth</div>;
 
 function App() {
   return (
