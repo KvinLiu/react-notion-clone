@@ -19,7 +19,6 @@ export const NodeContainer = ({
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: node.id });
   const { changeNodeValue, changeNodeType, removeNodeByIndex } = useAppState();
-  const { type, value } = node;
   const style = {
     transform: CSS.Transform.toString(transform),
   };
