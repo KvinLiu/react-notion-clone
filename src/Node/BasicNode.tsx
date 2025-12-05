@@ -5,7 +5,7 @@ import type {
   MouseEventHandler,
 } from "react";
 import cx from "classnames";
-import styles from "./BasicNode.module.css";
+import styles from "./Node.module.css";
 import { nanoid } from "nanoid";
 import { useAppState } from "../state/AppStateContext";
 import { CommandPanel } from "./CommandPanel";
